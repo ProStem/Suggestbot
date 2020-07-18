@@ -14,7 +14,7 @@ module.exports = {
 
     const channel =
       message.mentions.channels.first() ||
-      message.guild.channels.cache.get(`${args[0]}`) ||
+      message.guild.channels.cache.get(`${args[0]}`).name ||
       message.guild.channels.cache.find(x => x.name === `${args.join(" ")}`) ||
       message.channel;
 
@@ -22,7 +22,7 @@ module.exports = {
       return message.channel.send(`Please give me valid text channel not voice channel!`);
     }
 
-    db.set(`SuggestionChannel`, channel);
+    db.set(`SuggestionChannel_${message.guild.id}`, channel.id);
     message.channel.send(
       new MessageEmbed()
         .setColor(`${Color}`)

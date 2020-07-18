@@ -4,25 +4,25 @@ const db = require("quick.db");
 
 module.exports = {
   name: "suggestion",
-  aliases: ["suggest"],
+  aliases: ["suggest", "sug"],
   description: "Suggest Something!",
   category: "Members",
   run: async (client, message, args) => {
-
     if (!args[0]) return message.channel.send(`Please Give Me Suggestion!`);
-    
+
     const suggest = args.join(" ");
-    
-    let ch = await db.fetch(`SuggestionChannel`);
-    if (ch === null) return message.channel.send(`No Suggestion Channel Found!`);
-    
-    Let Date = new Date();
-    
+
+    let ch = await db.get(`SuggestionChannel_${message.guild.id}`);
+    if (ch === null)
+      return message.channel.send(`No Suggestion Channel Found!`);
+
     const em = new MessageEmbed()
-    .setColor(`${Color}`)
-    .setTitle(`New Suggestion!`)
-    .setDescription(`${suggest}`)
-    .setFooter(`By ${message.author.tag} | Date : ${}`)
+      .setColor(`${Color}`)
+      .setTitle(`New Suggestion!`)
+      .setDescription(`${suggest}`)
+      .setFooter(`By ${message.author.tag}`)
+      .setTimestamp();
     
+    message.guild.channels.cache.get(ch).send(em);
   }
 };

@@ -8,11 +8,19 @@ module.exports = {
   description: "Help command!",
   category: "Members",
   run: async (client, message, args) => {
+    
+    let checkdes;
+    if (message.member.hasPermission("ADMINISTRATOR")) {
+      checkdes = `setsuggestionchannel - setsuggest - ssc, suggestion - suggest, Ip - Ts`;
+    } else {
+      checkdes = `suggestion - suggest, Ip - Ts`
+    }
+    
     const embednor = new MessageEmbed()
       .setColor(`${Color}`)
-      .setTitle(`Help Here! All Commands List!`)
+      .setTitle(`All Commands List!`)
       .setDescription(
-        "`setsuggestionchannel - setsuggest - ssc`, `suggestion - suggest`"
+        `${checkdes}`
       )
       .setTimestamp()
       .setFooter(`Requested by ${message.author.username}`);

@@ -6,7 +6,7 @@ module.exports = {
   name: "setsuggestionchannel",
   aliases: ["setsuggest", "ssc"],
   description: "Set Suggestion Channel!",
-  category: "Members",
+  category: "Administrators",
   run: async (client, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(`You don't have permission | require : Adminsitrator!`);

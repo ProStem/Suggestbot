@@ -41,7 +41,7 @@ client.on("message", async message => {
       new MessageEmbed()
         .setColor(`${Color}`)
         .setTitle(`Information`)
-        .setDescription(`Bot prefix : ${Prefix} | Help command : ${Prefix}help`)
+        .setDescription(`Bot prefix : ${Prefix} | Help command: ${Prefix}help`)
         .setTimestamp()
         .setFooter(`Requested by ${message.author.username}`)
     );
@@ -49,23 +49,30 @@ client.on("message", async message => {
 });
 
 client.on("message", async message => {
-  if (message.channel.type === "dm") {
   if (message.author.bot) return;
   if (!message.guild) return;
     
-  let Prefix2 = require("./config.js")
 
-  if (message.content.startsWith(Prefix2)) return;
+  if (message.channel.type === "dm") {
+    if (message.author.bot) return;
+    return console.log(
+      `\n${message.channel.recipient.tag}'s DMs:\n\t${message.author.tag}: ${message.content}\n`
+    );
+  }
+
+  if (message.author.bot) return;
+
+  if (message.content.indexOf(Prefix)) return;
 
   let messageArray = message.content.split(` `);
   let args = messageArray.slice(1);
   let cmd = messageArray[0].toLowerCase();
 
   let command =
-    client.commands.get(cmd.slice(Prefix2.length)) ||
-    client.commands.get(client.aliases.get(cmd.slice(Prefix2.length)));
+    client.commands.get(cmd.slice(Prefix.length)) ||
+    client.commands.get(client.aliases.get(cmd.slice(Prefix.length)));
   if (command) command.run(client, message, args);
-
-}});
+    
+  });
 
 client.login(Token); //Bot Login With Token!

@@ -1,3 +1,3 @@
 exports.Prefix = `-sug`; //Normal Default Prefix!
-exports.Token = `td6HVWGZWi1h0GmZw6kno5AVNQ5PdZGw`; //Bot Token!
+exports.Token = `NzMzOTgxODYxNzI1ODYzOTU3.XxNakA.YiJgSifCVZAZU_L_fuE8F6x3iU0`; //Bot Token!
 exports.Owner = `404665146137640970`; //Bot Owner ID!

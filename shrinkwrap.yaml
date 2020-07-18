@@ -1,6 +1,7 @@
 dependencies:
   discord.js: 12.2.0
   express: 4.17.1
+  fs: 0.0.2
   quick.db: 7.1.1
 packages:
   /@discordjs/collection/0.1.5:
@@ -357,6 +358,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GWSSJGFy4e9GUeCcbIkED+bgAoFyj7XF1mV8rma3QW4NIqX9Kyx79N/PF61H5udOV3aY1IaMLs6pGbH71nlCTA==
+  /fs/0.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-4fJE7zkzwbKmS9R5kTYGDQ9ZFPg=
   /gauge/2.7.4:
     dependencies:
       aproba: 1.2.0
@@ -990,4 +995,5 @@ shrinkwrapVersion: 3
 specifiers:
   discord.js: ^12.2.0
   express: ^4.17.1
+  fs: ^0.0.2
   quick.db: ^7.1.1

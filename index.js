@@ -53,17 +53,17 @@ client.on("message", async message => {
   if (message.author.bot) return;
   if (!message.guild) return;
     
-    
+  let Prefix2 = require("./config.js")
 
-  if (message.content.indexOf(Prefix)) return;
+  if (message.content.startsWith(Prefix2)) return;
 
   let messageArray = message.content.split(` `);
   let args = messageArray.slice(1);
   let cmd = messageArray[0].toLowerCase();
 
   let command =
-    client.commands.get(cmd.slice(Prefix.length)) ||
-    client.commands.get(client.aliases.get(cmd.slice(Prefix.length)));
+    client.commands.get(cmd.slice(Prefix2.length)) ||
+    client.commands.get(client.aliases.get(cmd.slice(Prefix2.length)));
   if (command) command.run(client, message, args);
 
 }});

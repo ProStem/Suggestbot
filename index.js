@@ -50,13 +50,10 @@ client.on("message", async message => {
 
 client.on("message", async message => {
   if (message.channel.type === "dm") {
-    if (message.author.bot) return;
-
-
-  if (message.content.includes(client.user.id))
-    message.channel.send(
-      `Hello! Im Verziles and the prefix for this guild is: ${Prefix}`
-      )
+  if (message.author.bot) return;
+  if (!message.guild) return;
+    
+    
 
   if (message.content.indexOf(Prefix)) return;
 

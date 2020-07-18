@@ -4,8 +4,8 @@ const db = require("quick.db");
 
 module.exports = {
   name: "setsuggestionchannel",
-  aliases: ["setsuggest", "ssc"],
-  description: "Set Suggestion Channel!",
+//  aliases: ["setsuggest", "ssc"],
+//  description: "Set Suggestion Channel!",
   category: "Members",
   run: async (client, message, args) => {
   message.channel.send(`working in f mode`)

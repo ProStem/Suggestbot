@@ -10,7 +10,7 @@ client.descriptions = new Discord.Collection();
 //Ready Event
 client.on("ready", async () => {
   console.log(`Ready To Go No Error So Far!`); //Console Message!
-  client.user.setActivity(`watching all of yall :)`, { type: "PLAYING" }); //Bot Activity!
+  client.user.setActivity(`Ping me for Help!`, { type: "PLAYING" }); //Bot Activity!
 });
 
 let modules = [

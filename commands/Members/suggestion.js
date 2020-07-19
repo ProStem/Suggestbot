@@ -22,9 +22,9 @@ module.exports = {
       .setDescription(`${suggest}`)
       .setFooter(`By ${message.author.tag}`)
       .setTimestamp(); 
+      
     message.delete();
     message.guild.channels.cache.get(ch).send(em);
-
     
   }
 };

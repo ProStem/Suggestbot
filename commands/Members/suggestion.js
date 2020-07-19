@@ -24,7 +24,10 @@ module.exports = {
       .setTimestamp(); 
       
     message.delete();
-    message.guild.channels.cache.get(ch).send(em);
-    
+message.guild.channels.cache.get(ch).send(em)
+  .then(async (m) => {
+await m.react("✅");
+await m.react("❌");
+});
   }
 };

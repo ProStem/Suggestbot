@@ -21,8 +21,21 @@ module.exports = {
       .setTitle(`New Suggestion!`)
       .setDescription(`${suggest}`)
       .setFooter(`By ${message.author.tag}`)
-      .setTimestamp();
-    
+      .setTimestamp(); 
     message.guild.channels.cache.get(ch).send(em);
-  }
-};
+
+     msg.delete();
+        console.log(message.startsWith(prefix))
+        if (message.startsWith(prefix) != true) {
+            return;
+        } else {
+            message = message.replace('!suggest ', '');
+            msg.reply('Suggestion ' + message + ' has been submitted! Check <voting channel tag> to vote')
+            client.channels.get('voting channel id').send('New Suggestion: ' + message)
+                .then(function (message) {
+                    message.react('✅');
+                    message.react('❌');
+                })
+        }
+    }
+  };

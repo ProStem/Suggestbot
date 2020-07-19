@@ -24,7 +24,7 @@ module.exports = {
       .setTimestamp(); 
     message.delete();
     message.guild.channels.cache.get(ch).send(em);
-//❌
+
     
   }
 };

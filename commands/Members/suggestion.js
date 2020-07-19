@@ -19,8 +19,8 @@ module.exports = {
     const em = new MessageEmbed()
       .setColor(`${Color}`)
       .setTitle(`התקבלה הצעה חדשה!`)
-      .setDescription(`$@{message.author.id}`)
-      .setFooter(`Gamers-Israel | Suggestion Bot `)
+      .setDescription(`הוצע על ידי: <@${message.author.id}>\nההצעה: ${suggest} `)
+      .setFooter(`Gamers-Israel | Suggestion Bot | Prostem & K0Lega`)
       .setTimestamp(); 
       
     message.delete();
@@ -28,6 +28,7 @@ message.guild.channels.cache.get(ch).send(em)
   .then(async (m) => {
 await m.react("✅");
 await m.react("❌");
+await m.react(":flushed:");
 });
   }
 };

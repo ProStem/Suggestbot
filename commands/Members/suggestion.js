@@ -18,8 +18,8 @@ module.exports = {
 
     const em = new MessageEmbed()
       .setColor(`${Color}`)
-      .setTitle(`New Suggestion!`)
-      .setDescription(`${suggest}`)
+      .setTitle(`התקבלה הצעה חדשה!`)
+      .setDescription(`השחקן: ${message.author.tag}`)
       .setFooter(`By ${message.author.tag}`)
       .setTimestamp(); 
       

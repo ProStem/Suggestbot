@@ -20,7 +20,7 @@ module.exports = {
       .setColor(`${Color}`)
       .setTitle(`התקבלה הצעה חדשה!`)
       .setDescription(`הוצע על ידי: <@${message.author.id}>\nההצעה: ${suggest} `)
-      .setFooter(`Gamers-Israel | Suggestion Bot | Prostem & K0Lega`)
+      .setFooter(`Gamers-Israel | Suggestion Bot`)
       .setTimestamp(); 
       
     message.delete();
@@ -28,7 +28,6 @@ message.guild.channels.cache.get(ch).send(em)
   .then(async (m) => {
 await m.react("✅");
 await m.react("❌");
-await m.react(":flushed:");
 });
   }
 };

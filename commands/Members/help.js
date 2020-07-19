@@ -11,7 +11,7 @@ module.exports = {
     
     let checkdes;
     if (message.member.hasPermission("ADMINISTRATOR")) {
-      checkdes = `setsuggestionchannel - setsuggest - ssc, suggestion - suggest, Ip - Ts`;
+      checkdes = `setsuggestionchannel - setsuggest - ssc, suggestion - suggest, - Ip - Ts`;
     } else {
       checkdes = `suggestion - sue, Ip - Ts`
     }

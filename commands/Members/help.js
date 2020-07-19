@@ -11,9 +11,9 @@ module.exports = {
     
     let checkdes;
     if (message.member.hasPermission("ADMINISTRATOR")) {
-      checkdes = `setsuggestionchannel - setsuggest - ssc, suggestion - suggest, - Ip - Ts`;
+      checkdes = `setsuggestionchannel - setsuggest - ssc, Submit Lawsuit - sue, - Ip - Ts`;
     } else {
-      checkdes = `suggestion - sue, Ip - Ts`
+      checkdes = `Submit Lawsuit - sue, Ip - Ts`
     }
     
     const embednor = new MessageEmbed()

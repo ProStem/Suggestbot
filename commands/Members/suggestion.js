@@ -19,8 +19,8 @@ module.exports = {
     const em = new MessageEmbed()
       .setColor(`${Color}`)
       .setTitle(`התקבלה הצעה חדשה!`)
-      .setDescription(`השחקן: ${message.author.tag}`)
-      .setFooter(`By ${message.author.tag}`)
+      .setDescription(`$@{message.author.id}`)
+      .setFooter(`Gamers-Israel | Suggestion Bot `)
       .setTimestamp(); 
       
     message.delete();

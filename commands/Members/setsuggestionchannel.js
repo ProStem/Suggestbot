@@ -28,10 +28,10 @@ module.exports = {
         .setColor(`${Color}`)
         .setTitle(`Suggestion channel`)
         .setDescription(
-          `Suggestion channel has been setted to : ${channel.name}`
+          `Lawsuit channel has been setted to : ${channel.name}`
         )
         .setTimestamp()
-        .setFooter(`Setted by ${message.author.username}`)
+        .setFooter(`Submitted by ${message.author.username}`)
     );
   }
 };

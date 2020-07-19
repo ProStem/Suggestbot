@@ -13,7 +13,7 @@ module.exports = {
     if (message.member.hasPermission("ADMINISTRATOR")) {
       checkdes = `setsuggestionchannel - setsuggest - ssc, suggestion - suggest, Ip - Ts`;
     } else {
-      checkdes = `suggestion - suggest, Ip - Ts`
+      checkdes = `suggestion - sue, Ip - Ts`
     }
     
     const embednor = new MessageEmbed()
